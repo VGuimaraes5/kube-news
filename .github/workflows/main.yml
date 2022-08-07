@@ -31,8 +31,9 @@ jobs:
           context: ./src
           push: true
           tags: |
-            vguimaraes/kube-news:latest
             vguimaraes/kube-news:${{github.run_number}}
+            vguimaraes/kube-news:latest
+            
   CD:
     runs-on: ubuntu-latest
     needs: [CI]
