@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: vguimaraes/kube-news:2.0
+        image: vguimaraes/kube-news:1.0
         env:
         - name: DB_DATABASE
           value: "vgpostkube"
@@ -74,4 +74,4 @@ spec:
   - port: 80
     targetPort: 8080
     nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
